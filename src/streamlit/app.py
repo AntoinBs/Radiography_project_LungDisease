@@ -467,7 +467,7 @@ if page == pages[2] :
     if option== "CNN 2":
 
         confus=cv2.imread(r'reports/figures/Matrice_Confusion_Pytorch_CNN2.jpg')
-        archi=cv2.imread(r'reports/figures/Model_Architecture\CNN2.PNG')
+        archi=cv2.imread(r'reports/figures/Model_Architecture/CNN2.PNG')
 
         st.image(archi, channels="BGR", caption="Architecture de notre CNN")
         st.image(confus, channels="BGR", caption="Matrice de Confusion du modèle")
