@@ -609,7 +609,7 @@ if page == pages[4]:
     custom_objects = {"RandomRotation": RandomRotation}
 
     # Ouverture du modèle
-    model = load_model("./models/model_xception.keras", custom_objects=custom_objects)
+    model = load_model(r"models/model_xception.keras", custom_objects=custom_objects)
 
     base_model = model.get_layer("xception")
 
