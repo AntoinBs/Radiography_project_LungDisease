@@ -110,7 +110,7 @@ if page == pages[0] :
 if page == pages[1] :
     st.write("### Data Exploration")
     
-    df=pd.read_csv(r'data/processed/metadatas_with_url.csv')
+    df=pd.read_csv(r'data/data_for_st/metadatas_with_url.csv')
     
     if st.checkbox("Afficher un échantillon des images") :
         # Dossiers contenant les images
@@ -186,7 +186,7 @@ if page == pages[1] :
 
     if st.checkbox("Afficher une image qui comporte un appareil médical") :
 
-       image_med_tool=cv2.imread(r'data\data_for_st\Lung_Opacity-5.png')
+       image_med_tool=cv2.imread(r'data/data_for_st/Lung_Opacity-5.png')
        st.image(image_med_tool, channels = "BGR", caption="Exemple d'image qui comporte un appareil médical")
     st.write("### Répartition des données")
     
