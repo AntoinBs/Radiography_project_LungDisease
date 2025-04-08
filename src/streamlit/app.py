@@ -391,7 +391,7 @@ if page == pages[2] :
     if option== "InceptionV3":
         #fig, axes = plt.subplots(1, 2, figsize=(10, 4))
         confus=cv2.imread(r'reports/figures/Confusion_matrix__TL_InceptionV3_RETRAINED.png')
-        archi=cv2.imread(r'reports/figures/Model_Architecture\InceptionV3.jpg')
+        archi=cv2.imread(r'reports/figures/Model_Architecture/InceptionV3.jpg')
         #axes[0].imshow(archi)
         #axes[0].set_title('Architecture de InceptionV3')
         #axes[0].axis('off')
