@@ -1,5 +1,4 @@
-﻿python==3.12.2
-absl-py==2.2.2
+﻿absl-py==2.2.2
 altair==5.5.0
 astunparse==1.6.3
 attrs==25.3.0
