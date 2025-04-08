@@ -167,9 +167,6 @@ cython_debug/
 # Data folder
 data/
 
-# Models folder
-models/
-
 # Antoine B notebooks
 notebooks/AntoineB/CSV/images_pca.csv
 notebooks/AntoineB/Libraries/LoadData.py
