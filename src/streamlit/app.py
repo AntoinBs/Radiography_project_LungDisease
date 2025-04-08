@@ -620,7 +620,31 @@ if page == pages[4]:
     base_model = model.get_layer("xception")
 
     class_names = ['COVID', 'LUNG OPACITY', 'NORMAL', 'VIRAL PNEUMONIA']
+    st.write("Pour la démonstration, nous allons utiliser une image sur laquelle nous avons déjà appliqué le masque. Celle-ci est une radiographie d'un patient ayant la COVID-19:")
+    img_default = cv2.imread("data/data_for_st/COVID-120.png", cv2.IMREAD_COLOR_BGR)
+    if img_default is not None:
 
+        # Preprocessing  
+        img_default = np.expand_dims(img_default, axis=0)
+        img_default = img_default.astype(np.uint8)
+        
+        # Prédiction
+        prediction_default = np.argmax(model.predict(img_default), axis=1)
+        prediction_default = class_names[prediction_default[0]]
+
+        col1, col2 = st.columns(2)
+        # Affichage de l'image originale
+        with col1:
+            st.image(img_default, caption = f"Classe prédite : {prediction_default}")
+
+        conv_layers_default = [layer.name for layer in base_model.layers if (isinstance(layer, Conv2D) or isinstance(layer, SeparableConv2D))][-1]
+        grad_cam_image_default = grad_cam(img_default, model, base_model, conv_layers_default)
+
+        with col2:
+            st.image(grad_cam_image_default, caption = f"gradcam")
+    
+    st.markdown("---")
+    st.write("Vous pouvez également tester notre modèle sur votre propre radiographie, mais celle-ci doit préalablement avoir été masquée sur la zone des poumons.")
     uploaded_file = st.file_uploader("Choisissez un fichier", type=["png"])
     if uploaded_file is not None:
         st.write("Image choisie:", uploaded_file.name)
