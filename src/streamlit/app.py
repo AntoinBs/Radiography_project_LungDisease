@@ -110,7 +110,7 @@ if page == pages[0] :
 if page == pages[1] :
     st.write("### Data Exploration")
     
-    df=pd.read_csv(r'data/processed/metadatas_with_url.csv')
+    df=pd.read_csv(r'data/data_for_st/metadatas_with_url.csv')
     
     if st.checkbox("Afficher un échantillon des images") :
         # Dossiers contenant les images
