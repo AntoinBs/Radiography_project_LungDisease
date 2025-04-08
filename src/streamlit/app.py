@@ -390,8 +390,8 @@ if page == pages[2] :
 
     if option== "InceptionV3":
         #fig, axes = plt.subplots(1, 2, figsize=(10, 4))
-        confus=cv2.imread(r'reports\figures\Confusion_matrix__TL_InceptionV3_RETRAINED.png')
-        archi=cv2.imread(r'reports\figures\Model_Architecture\InceptionV3.jpg')
+        confus=cv2.imread(r'reports/figures/Confusion_matrix__TL_InceptionV3_RETRAINED.png')
+        archi=cv2.imread(r'reports/figures/Model_Architecture\InceptionV3.jpg')
         #axes[0].imshow(archi)
         #axes[0].set_title('Architecture de InceptionV3')
         #axes[0].axis('off')
@@ -402,15 +402,15 @@ if page == pages[2] :
         st.image(archi, channels="BGR", caption="Architecture de InceptionV3")
         st.image(confus, channels="BGR", caption="Matrice de Confusion du modèle")
         
-        classif=np.load(r'reports\figures\Classification_report_TL_InceptionV3_RETRAINED.npy', allow_pickle=True)
+        classif=np.load(r'reports/figures/Classification_report_TL_InceptionV3_RETRAINED.npy', allow_pickle=True)
         st.code(classif, language="plaintext")
 
 
 
     if option== "VGG19":
         #fig, axes = plt.subplots(1, 2, figsize=(10, 4))
-        confus=cv2.imread(r'reports\figures\Confusion_Matrix_VGG19.png')
-        archi=cv2.imread(r'reports\figures\Model_Architecture\VGG19.jpg')
+        confus=cv2.imread(r'reports/figures/Confusion_Matrix_VGG19.png')
+        archi=cv2.imread(r'reports/figures/Model_Architecture/VGG19.jpg')
         #axes[0].imshow(archi)
         #axes[0].set_title('Architecture de VGG19')
         #axes[0].axis('off')
@@ -424,13 +424,13 @@ if page == pages[2] :
 
         #classif=np.load(r'reports\figures\Classification_report_TL_vgg19.npy', allow_pickle=True)
         #st.code(classif, language="plaintext")
-        classif=cv2.imread(r'reports\figures\Classification_report_TL_vgg19.png')
+        classif=cv2.imread(r'reports/figures/Classification_report_TL_vgg19.png')
         st.image(classif, channels="BGR")
     
     if option== "Xception":
         #fig, axes = plt.subplots(1, 2, figsize=(10, 4))
-        confus=cv2.imread(r'reports\figures\Confusion_Matrix_Xception.png')
-        archi=cv2.imread(r'reports\figures\Model_Architecture\XCeption.png')
+        confus=cv2.imread(r'reports/figures/Confusion_Matrix_Xception.png')
+        archi=cv2.imread(r'reports/figures/Model_Architecture/XCeption.png')
         archi = cv2.rotate(archi, cv2.ROTATE_90_CLOCKWISE)
         #axes[0].imshow(archi)
         #axes[0].set_title('Architecture de Xception')
@@ -443,14 +443,14 @@ if page == pages[2] :
         st.image(archi, channels="BGR", caption="Architecture de Xception")
         st.image(confus, channels="BGR", caption="Matrice de Confusion du modèle")
         
-        classif=np.load(r'reports\figures\Classification_report_TL_xception.npy', allow_pickle=True)
+        classif=np.load(r'reports/figures/Classification_report_TL_xception.npy', allow_pickle=True)
         st.code(classif, language="plaintext")
         
 
     if option== "CNN 1":
         #fig, axes = plt.subplots(1, 2, figsize=(10, 4))
-        confus=cv2.imread(r'reports\figures\Confusion_matrix__DL_Convol_2.png')
-        archi=cv2.imread(r'reports\figures\Model_Architecture\CNN1.PNG')
+        confus=cv2.imread(r'reports/figures/Confusion_matrix__DL_Convol_2.png')
+        archi=cv2.imread(r'reports/figures/Model_Architecture/CNN1.PNG')
         #axes[0].imshow(archi)
         #axes[0].set_title('Architecture de notre CNN')
         #axes[0].axis('off')
@@ -461,18 +461,18 @@ if page == pages[2] :
         st.image(archi, channels="BGR", caption="Architecture de notre CNN")
         st.image(confus, channels="BGR", caption="Matrice de Confusion du modèle")
         
-        classif=np.load(r'reports\figures\Classification_report_DL_Convol_2.npy', allow_pickle=True)
+        classif=np.load(r'reports/figures/Classification_report_DL_Convol_2.npy', allow_pickle=True)
         st.code(classif, language="plaintext")
     
     if option== "CNN 2":
 
-        confus=cv2.imread(r'reports\figures\Matrice_Confusion_Pytorch_CNN2.jpg')
-        archi=cv2.imread(r'reports\figures\Model_Architecture\CNN2.PNG')
+        confus=cv2.imread(r'reports/figures/Matrice_Confusion_Pytorch_CNN2.jpg')
+        archi=cv2.imread(r'reports/figures/Model_Architecture\CNN2.PNG')
 
         st.image(archi, channels="BGR", caption="Architecture de notre CNN")
         st.image(confus, channels="BGR", caption="Matrice de Confusion du modèle")
         
-        classif=np.load(r'reports\figures\Classification_CNN2.npy', allow_pickle=True)
+        classif=np.load(r'reports/figures/Classification_CNN2.npy', allow_pickle=True)
         st.code(classif, language="plaintext")
     
     if st.checkbox('Afficher la comparaison des modèles'):
