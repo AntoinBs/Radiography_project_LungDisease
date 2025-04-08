@@ -514,7 +514,7 @@ if page == pages[3] :
     # COURBE D'APPRENTISSAGE
     st.write("## Courbe d'apprentissage")
 
-    courbe_apprentissage = cv2.imread(r"reports\figures\courbe_apprentissage_xception.png")
+    courbe_apprentissage = cv2.imread(r"reports/figures/courbe_apprentissage_xception.png")
     
     with st.expander("**Courbe d'apprentissage**"):
         st.image(courbe_apprentissage, channels="BGR")
@@ -536,9 +536,9 @@ if page == pages[3] :
     # MATRICE DE CONFUSION
     st.write("## Que nous apprend la matrice de confusion?")
 
-    matrice_confusion_xception = cv2.imread(r"reports\figures\Confusion_Matrix_Xception.png", cv2.IMREAD_COLOR)
+    matrice_confusion_xception = cv2.imread(r"reports/figures/Confusion_Matrix_Xception.png", cv2.IMREAD_COLOR)
     matrice_confusion_xception = cv2.cvtColor(matrice_confusion_xception, cv2.COLOR_BGR2RGB)
-    rapport_classification_xception = np.load(r"reports\figures\Classification_report_TL_xception.npy", allow_pickle=True)
+    rapport_classification_xception = np.load(r"reports/figures/Classification_report_TL_xception.npy", allow_pickle=True)
 
     with st.expander("**Matrice de confusion**"):
         st.image(matrice_confusion_xception)
@@ -551,8 +551,8 @@ if page == pages[3] :
              Sur la matrice de confusion, on voit que les classe **normale** et **opacité pulmonaire** sont les plus confondus. Il serait intéressant de visualiser un échantillon de patients "normaux" ayant été détectés comme ayant une opacité pulmonaire.
              """)
     
-    echantillon = cv2.imread(r"reports\figures\bias_prediction1.png")
-    zoom = cv2.imread(r"reports\figures\bias_prediction1_2.png")
+    echantillon = cv2.imread(r"reports/figures/bias_prediction1.png")
+    zoom = cv2.imread(r"reports/figures/bias_prediction1_2.png")
     
     # ECHANTILLON D'IMAGES
     with st.expander("**Echantillon de 'NORMAL' détectés comme 'LUNG OPACITY'**"):
@@ -564,7 +564,7 @@ if page == pages[3] :
              Une potentielle amélioration consistrerait donc soit à trouver davantage d'images avec matériel médical, soit d'augmenter artificiellement son nombre.
              """)
     
-    echantillon2 = cv2.imread(r"reports\figures\bias_prediction2_TCOVID_PNORMAL.png")
+    echantillon2 = cv2.imread(r"reports/figures/bias_prediction2_TCOVID_PNORMAL.png")
     with st.expander("**Echantillon de 'COVID' détectés comme 'NORMAL'**"):
         st.image(echantillon2, channels="BGR")
     st.write("""
@@ -576,9 +576,9 @@ if page == pages[3] :
     
     # INTERPRETABILITE
     st.write("## Interprétabilité")
-    gradcam = cv2.imread(r"reports\figures\gradcam_Xception.png")
-    gradcam_intermediaire = cv2.imread(r"reports\figures\gradcam_Xception_intermediaire.png")
-    gradcam_comparaison = cv2.imread(r"reports\figures\gradcam_Xception_vs_VGG19.png")
+    gradcam = cv2.imread(r"reports/figures/gradcam_Xception.png")
+    gradcam_intermediaire = cv2.imread(r"reports/figures/gradcam_Xception_intermediaire.png")
+    gradcam_comparaison = cv2.imread(r"reports/figures/gradcam_Xception_vs_VGG19.png")
 
     with st.expander("**GRADCAM Xception - dernière couche de convolution**"):
         st.image(gradcam, channels="BGR")
