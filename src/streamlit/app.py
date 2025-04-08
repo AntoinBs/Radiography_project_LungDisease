@@ -218,7 +218,7 @@ if page == pages[1] :
 
     if st.checkbox("Afficher le graphiques de l'origine des données") :
         # Initialisation des métadonnées
-        df_meta = pd.read_csv("./data/processed/metadatas_with_url.csv")
+        df_meta = pd.read_csv("./data/data_for_st/metadatas_with_url.csv")
         df_meta['URL'] = df_meta['URL'].str.replace("https://", "", regex=False)
 
         fig, ax = plt.subplots()
@@ -232,7 +232,7 @@ if page == pages[1] :
     st.write("### Analyse de la distribution de pixels par pathologie")
 
     if st.checkbox("Afficher la densité des pixels des images") :
-        mean_density = pd.read_csv("./data/processed/mean_density.csv")
+        mean_density = pd.read_csv("./data/data_for_st/mean_density.csv")
 
         # Box plot avec Matplotlib
         # Création de la figure plus grande pour une meilleure lisibilité
