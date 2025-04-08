@@ -294,17 +294,17 @@ if page == pages[1] :
         # Sélection des histogrammes
         # Initialisation des histogrammes
         histograms_full_images = {
-            "hist_COVID": np.array(pd.read_csv(r'data\data_for_st\histogram_fullimg_COVID',index_col='Unnamed: 0')),
-            "hist_NORMAL": np.array(pd.read_csv(r'data\data_for_st\histogram_fullimg_NORMAL',index_col='Unnamed: 0')),
-            "hist_VIRAL_PNEUMONIA": np.array(pd.read_csv(r'data\data_for_st\histogram_fullimg_VIRAL_PNEUMONIA',index_col='Unnamed: 0')),
-            "hist_LUNG_OPACITY": np.array(pd.read_csv(r'data\data_for_st\histogram_fullimg_LUNG_OPACITY',index_col='Unnamed: 0'))
+            "hist_COVID": np.array(pd.read_csv(r'data/data_for_st/histogram_fullimg_COVID',index_col='Unnamed: 0')),
+            "hist_NORMAL": np.array(pd.read_csv(r'data/data_for_st/histogram_fullimg_NORMAL',index_col='Unnamed: 0')),
+            "hist_VIRAL_PNEUMONIA": np.array(pd.read_csv(r'data/data_for_st/histogram_fullimg_VIRAL_PNEUMONIA',index_col='Unnamed: 0')),
+            "hist_LUNG_OPACITY": np.array(pd.read_csv(r'data/data_for_st/histogram_fullimg_LUNG_OPACITY',index_col='Unnamed: 0'))
         }
 
         histograms_masked_images = {
-            "hist_COVID": np.array(pd.read_csv(r'data\data_for_st\histogram_maskimg_COVID',index_col='Unnamed: 0')),
-            "hist_NORMAL": np.array(pd.read_csv(r'data\data_for_st\histogram_maskimg_NORMAL',index_col='Unnamed: 0')),
-            "hist_VIRAL_PNEUMONIA": np.array(pd.read_csv(r'data\data_for_st\histogram_maskimg_VIRAL_PNEUMONIA',index_col='Unnamed: 0')),
-            "hist_LUNG_OPACITY": np.array(pd.read_csv(r'data\data_for_st\histogram_maskimg_LUNG_OPACITY',index_col='Unnamed: 0'))
+            "hist_COVID": np.array(pd.read_csv(r'data/data_for_st/histogram_maskimg_COVID',index_col='Unnamed: 0')),
+            "hist_NORMAL": np.array(pd.read_csv(r'data/data_for_st/histogram_maskimg_NORMAL',index_col='Unnamed: 0')),
+            "hist_VIRAL_PNEUMONIA": np.array(pd.read_csv(r'data/data_for_st/histogram_maskimg_VIRAL_PNEUMONIA',index_col='Unnamed: 0')),
+            "hist_LUNG_OPACITY": np.array(pd.read_csv(r'data/data_for_st/histogram_maskimg_LUNG_OPACITY',index_col='Unnamed: 0'))
         }
 
         # Sélection du type d'image
