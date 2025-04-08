@@ -192,7 +192,7 @@ if page == pages[1] :
     
     if st.checkbox("Afficher les graphiques de répartition du jeu de données") :
             # Initialisation des métadonnées
-            df_meta = pd.read_csv("./data/processed/metadatas_with_url.csv")
+            df_meta = pd.read_csv("./data/data_for_st/metadatas_with_url.csv")
             
             # Configuration de la figure
             labels = 'NORMAL', 'OPACITY', 'COVID', 'VIRAL'
