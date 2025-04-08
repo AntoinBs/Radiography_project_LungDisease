@@ -9,6 +9,7 @@ import seaborn as sns
 
 # Librairie pour utiliser les dossiers du système
 import os
+import gdown
 from pathlib import Path
 
 # Librairie pour générer un choix aléatoire
@@ -609,7 +610,12 @@ if page == pages[4]:
     custom_objects = {"RandomRotation": RandomRotation}
 
     # Ouverture du modèle
-    model = load_model(r"models/model_xception.keras", custom_objects=custom_objects)
+    MODEL_PATH = r"models/model_xception.keras"
+    if not os.path.exists(MODEL_PATH):
+        url = "https://drive.google.com/uc?id=1j8lUbr3yZgFWb8xR36RbFztUUB2qdN4d"  
+        gdown.download(url, MODEL_PATH, quiet=False)
+
+    model = load_model(MODEL_PATH, custom_objects=custom_objects)
 
     base_model = model.get_layer("xception")
 
