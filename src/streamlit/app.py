@@ -112,18 +112,14 @@ if page == pages[1] :
     
     df=pd.read_csv(r'data/processed/metadatas_with_url.csv')
     
-    if st.checkbox("Afficher un échantillon aléatoire des images") :
+    if st.checkbox("Afficher un échantillon des images") :
         # Dossiers contenant les images
-        dossiers_images = {
-            "COVID": "./data/raw/COVID/images",
-            "Lung Opacity": "./data/raw/Lung_Opacity/images",
-            "Normal": "./data/raw/Normal/images",
-            "Viral Pneumonia": "./data/raw/VIRAL_PNEUMONIA/images"
+        selected_images = {
+            "COVID": "./data/data_for_st/images_raw/COVID-1.png",
+            "Lung Opacity": "data/data_for_st/images_raw/Lung_Opacity-1.png",
+            "Normal": "data/data_for_st/images_raw/NORMAL-1.png",
+            "Viral Pneumonia": "data/data_for_st/images_raw/Viral_Pneumonia-1.png"
         }
-
-        # Sélection des images masquées
-        selected_images = {category: get_random_image(path) for category, path in dossiers_images.items()}
-        
         # Création de 4 colonnes
         cols = st.columns(4)  
 
@@ -139,18 +135,14 @@ if page == pages[1] :
                     st.image(img, caption=category, use_container_width=True)
             index += 1
 
-    if st.checkbox("Afficher un échantillon aléatoire des masques") :
+    if st.checkbox("Afficher un échantillon des masques") :
         # Dossiers contenant les images
-        dossiers_masques = {
-            "COVID": "./data/raw/COVID/masks",
-            "Lung Opacity": "./data/raw/Lung_Opacity/masks",
-            "Normal": "./data/raw/Normal/masks",
-            "Viral Pneumonia": "./data/raw/VIRAL_PNEUMONIA/masks"
+        selected_masks = {
+            "COVID": "./data/data_for_st/masks/COVID-1.png",
+            "Lung Opacity": "data/data_for_st/masks/Lung_Opacity-1.png",
+            "Normal": "data/data_for_st/masks/NORMAL-1.png",
+            "Viral Pneumonia": "data/data_for_st/masks/Viral_Pneumonia-1.png"
         }
-
-        # Sélection des images masquées
-        selected_masks = {category: get_random_image(path) for category, path in dossiers_masques.items()}
-        
         # Création de 4 colonnes
         cols = st.columns(4)  
 
@@ -169,17 +161,14 @@ if page == pages[1] :
         st.write("Notre jeu de données est une bibliothèque de radiographies pulmonaires classés par catégorie de pathologie (COVID, Pneumonie Virale, Opacité Pulmonaire et Cas Normal). Nous avons à notre disposition les masques adaptés à chaque images.")
         st.write("Les images sont au format PNG 299x299 tandis que les masques font 256x256.")
 
-    if st.checkbox("Afficher un échantillon aléatoire d'images masquées") :
+    if st.checkbox("Afficher un échantillon d'images masquées") :
         # Dossiers contenant les images
-        dossiers_images_masquees = {
-            "COVID": "./data/processed/COVID/images_masked",
-            "Lung Opacity": "./data/processed/LUNG_OPACITY/images_masked",
-            "Normal": "./data/processed/NORMAL/images_masked",
-            "Viral Pneumonia": "./data/processed/VIRAL_PNEUMONIA/images_masked"
+        selected_masked = {
+            "COVID": "./data/data_for_st/images_masked/COVID-1.png",
+            "Lung Opacity": "data/data_for_st/images_masked/Lung_Opacity-1.png",
+            "Normal": "data/data_for_st/images_masked/NORMAL-1.png",
+            "Viral Pneumonia": "data/data_for_st/images_masked/Viral_Pneumonia-1.png"
         }
-
-        # Sélection des images
-        selected_masked = {category: get_random_image(path) for category, path in dossiers_images_masquees.items()}
         # Création de 4 colonnes
         cols = st.columns(4)  
 
@@ -197,7 +186,7 @@ if page == pages[1] :
 
     if st.checkbox("Afficher une image qui comporte un appareil médical") :
 
-       image_med_tool=cv2.imread(r'data\processed\LUNG_OPACITY\images_masked\Lung_Opacity-5.png')
+       image_med_tool=cv2.imread(r'data\data_for_st\Lung_Opacity-5.png')
        st.image(image_med_tool, channels = "BGR", caption="Exemple d'image qui comporte un appareil médical")
     st.write("### Répartition des données")
     

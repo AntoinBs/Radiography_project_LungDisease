@@ -165,7 +165,8 @@ cython_debug/
 .vscode/
 
 # Data folder
-data/
+data/processed
+data/raw
 
 # Antoine B notebooks
 notebooks/AntoineB/CSV/images_pca.csv
@@ -177,5 +178,4 @@ notebooks/AntoineB/logs
 
 references/antoineB
 notebooks/AntoineB/Comparaison_gradcams.ipynb
-img_streamlit_1.jpg
 
